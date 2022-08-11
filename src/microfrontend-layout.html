@@ -1,0 +1,50 @@
+<single-spa-router base="/">
+  <!--
+
+    This is the single-spa Layout Definition for your microfrontends.
+    See https://single-spa.js.org/docs/layout-definition/ for more information.
+
+  -->
+
+  <!-- <nav>
+    <application name="@org/navbar"></application>
+  </nav>
+  <route path="settings">
+    <application name="@org/settings"></application>
+  </route> -->
+
+  <main>
+    <route default>
+      <application name="@annaniks/paratus"></application>
+    </route>
+    <route path="games">
+      <div id="paratus-portal">
+        <application name="@annaniks/paratus"></application>
+      </div>
+      <div id="paratus-games">
+        <application name="@annaniks/paratus-games"></application>
+      </div>
+    </route>
+  </main>
+
+  <style>
+    #paratus-portal {
+      width: 400px;
+    }
+    #paratus-games {
+      width: 100%;
+      background-color: #38a6df;
+    }
+    #paratus-games > div {
+      width: 100%;
+      height: 100%;
+      background: #f6f6f9;
+      box-shadow: -10px 0 60px #006caa, inset -1px 0 0 #e2e2ea;
+      border-radius: 40px 0 0 40px;
+      /* position: relative; */
+    }
+    main {
+      display: flex;
+    }
+  </style>
+</single-spa-router>
