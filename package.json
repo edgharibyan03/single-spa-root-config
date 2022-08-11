@@ -1,7 +1,7 @@
 {
   "name": "@paratus/root-config",
   "scripts": {
-    "start": "node server.js --env isLocal",
+    "start": "node server.js",
     "lint": "eslint src --ext js,ts,tsx",
     "test": "cross-env BABEL_ENV=test jest --passWithNoTests",
     "format": "prettier --write .",
