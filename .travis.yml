@@ -4,12 +4,12 @@ node_js:
 script:
   - yarn build
   - echo "Commit sha - $TRAVIS_COMMIT"
-  - mkdir -p dist/@thawkin3/root-config/$TRAVIS_COMMIT
-  - mv dist/*.* dist/@thawkin3/root-config/$TRAVIS_COMMIT/
+  - mkdir -p dist/paratus/root-config/$TRAVIS_COMMIT
+  - mv dist/*.* dist/paratus/root-config/$TRAVIS_COMMIT/
 deploy:
   provider: s3
-  access_key_id: "AKIARHRXWZNBQ72XM4VS"
-  secret_access_key: "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"
+  access_key_id: "AKIARHRXWZNB2PGOP6FF"
+  secret_access_key: "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"
   bucket: "annaniks-paratus"
   region: "ap-south-1"
   cache-control: "max-age=31536000"
